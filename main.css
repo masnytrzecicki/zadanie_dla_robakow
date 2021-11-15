@@ -5,6 +5,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
 }
 
 
@@ -35,6 +36,29 @@ nav img:hover{
     cursor: pointer;
     height: 26px;
     transition: 5ms all ease-in-out;
+}
+.hamburger{
+    border: none;
+    background: none;
+}
+
+.menu{
+    position: fixed;
+    transform: translateY(-100%);
+    transition: transform 0.2s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: white;
+    color: black;
+    list-style: none;
+
+}
+
+.showMenu {
+    transform: translateY(0);
 }
 
 .hero_wrapper{
@@ -88,6 +112,7 @@ nav img:hover{
     color: #fff;
     transition: .2s all ease-in-out;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 .mid_wrapper{
@@ -132,6 +157,7 @@ nav img:hover{
     color: #fff;
     transition: .2s all ease-in-out;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 .big_photo{
@@ -156,7 +182,6 @@ nav img:hover{
     margin: 100px;
 }
 .gallery{
-
     width: 100%;
     box-sizing: border-box;
     display: grid;
@@ -166,6 +191,7 @@ nav img:hover{
 .gallery img{
     width: 100%;
 }
+
 
 .mid_wrapper_dwa{
     display: grid;
@@ -237,14 +263,20 @@ nav img:hover{
     height: 40px;
     margin: 10px 0 10px 0;
     padding-left: 10px;
+    border: 2px #fff solid;
+    background: black;
     font-family: 'Montserrat', sans-serif;
+    color: white;
 }
 
 .right textarea{
     margin: 10px 0 10px 0;
     height: 100px;
     padding: 10px;
+    border: 2px #fff solid;
+    background: black;
     font-family: 'Montserrat', sans-serif;
+    color: #fff;
 
 }
 .left img{
@@ -269,6 +301,7 @@ nav img:hover{
     color: #000;
     transition: .2s all ease-in-out;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 .footer{

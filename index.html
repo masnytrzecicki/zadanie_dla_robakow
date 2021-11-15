@@ -16,28 +16,39 @@
 <body>
 <nav>
     <h1>logo</h1>
-    <img src="menu.png" alt="">
+    <button class="hamburger">
+        <img src="menu.png" alt="">
+    </button>
+
+    <ul class="showMenu">
+        <li><a href="#hero">START</a></li>
+        <li><a href="#mid">DESIGN</a></li>
+        <li><a href="#big">PHOTO</a></li>
+        <li><a href="#gallery">GALLERY</a></li>
+        <li><a href="#kontakt">KONTAKT</a></li>
+    </ul>
+
 </nav>
 
-<div class="hero_wrapper">
+<div class="hero_wrapper" id="hero">
     <div class="hero_text">
         <h1>DESIGN AGENCY</h1>
         <h2>Architecture</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consectetur convallis fringilla.</p>
-        <button>LEARN MORE</button>
+        <button onclick="window.location.href='#mid';">LEARN MORE</button>
     </div>
 </div>
 
-<div class="mid_wrapper">
+<div class="mid_wrapper" id="mid">
     <h3>WE DESIGN WITH</h3>
     <h1>The Future in Mind</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consectetur convallis fringilla. Suspendisse eget augue vitae metus fermentum porttitor. Mauris fringilla ipsum malesuada, malesuada est rhoncus, consectetur leo. Cras et justo ut libero porttitor dapibus ut at nibh. Aenean eu ullamcorper justo. Cras purus arcu, interdum a euismod ac, eleifend nec lacus.</p>
-    <button>LEARN MORE</button>
+    <button onclick="window.location.href='#big';">LEARN MORE</button>
 </div>
 
 
 
-<div class="big_photo">
+<div class="big_photo" id="big">
     <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consectetur convallis fringilla. Suspendisse eget augue vitae metus fermentum porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consectetur convallis fringilla. Suspendisse eget augue vitae metus fermentum porttitor</h3>
 </div>
 <div class="mid_wrapper_dwa">
@@ -54,7 +65,7 @@
         <a href="#">READ MORE</a>
     </div>
 </div>
-<div class="gallery">
+<div class="gallery" id="gallery">
     <img src="https://picsum.photos/400/300?1&grayscale" alt="">
     <img src="https://picsum.photos/400/300?2&grayscale" alt="">
     <img src="https://picsum.photos/400/300?3&grayscale" alt="">
@@ -63,7 +74,7 @@
     <img src="https://picsum.photos/400/300?6&grayscale" alt="">
 
 </div>
-<div class="kontakt">
+<div class="kontakt" id="kontakt">
     <div class="left">
         <h2>location</h2>
         <p>28 jackson blvd ste 1020 chicago <br> IL 606004-2340</p>
@@ -89,5 +100,26 @@
     <img src="github.svg" alt="">
     <img src="instagram.svg" alt="">
 </div>
+
+<script>
+    const menu = document.querySelector(".menu");
+const menuItems = document.querySelectorAll(".menuItem");
+const hamburger= document.querySelector(".hamburger");
+const closeIcon= document.querySelector(".closeIcon");
+const menuIcon = document.querySelector(".menuIcon");
+
+function toggleMenu() {
+    if (menu.classList.contains("showMenu")) {
+        menu.classList.remove("showMenu");
+        closeIcon.style.display = "none";
+        menuIcon.style.display = "block";
+    } else {
+        menu.classList.add("showMenu");
+        closeIcon.style.display = "block";
+        menuIcon.style.display = "none";
+    }
+}
+
+hamburger.addEventListener("click", toggleMenu);</script>
 </body>
 </html>
