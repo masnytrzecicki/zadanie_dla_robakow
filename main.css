@@ -26,10 +26,12 @@ nav h1{
     font-weight: 500;
     font-size: 2rem;
     color: #b1b1b1;
+    z-index: 11111;
 }
 
 nav img{
     height: 25px;
+    z-index: 11111;
 }
 
 nav img:hover{
@@ -40,6 +42,7 @@ nav img:hover{
 .hamburger{
     border: none;
     background: none;
+    z-index: 2;
 }
 
 .menu{
@@ -50,15 +53,30 @@ nav img:hover{
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 99;
+    z-index: 1;
     background: white;
     color: black;
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    gap: 16px;
+    text-decoration: none;
+}
+.menuItem{
+    list-style-type: none;
 
 }
 
+
 .showMenu {
     transform: translateY(0);
+}
+.closeIcon {
+    z-index: 1111;
+    display: none;
 }
 
 .hero_wrapper{

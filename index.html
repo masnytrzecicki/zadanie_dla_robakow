@@ -17,16 +17,17 @@
 <nav>
     <h1>logo</h1>
     <button class="hamburger">
-        <img src="menu.png" alt="">
+        <img src="menu.png" class="menuIcon" alt="">
+        <img src="close.png" class="closeIcon" alt="">
     </button>
 
-    <ul class="showMenu">
-        <li><a href="#hero">START</a></li>
-        <li><a href="#mid">DESIGN</a></li>
-        <li><a href="#big">PHOTO</a></li>
-        <li><a href="#gallery">GALLERY</a></li>
-        <li><a href="#kontakt">KONTAKT</a></li>
-    </ul>
+        <ul class="menu">
+            <li class="menuItem"><a href="#hero">START</a></li>
+            <li class="menuItem"><a href="#mid">DESIGN</a></li>
+            <li class="menuItem"><a href="#big">PHOTO</a></li>
+            <li class="menuItem"><a href="#gallery">GALLERY</a></li>
+            <li class="menuItem"><a href="#kontakt">KONTAKT</a></li>
+        </ul>
 
 </nav>
 
@@ -112,12 +113,17 @@ function toggleMenu() {
     if (menu.classList.contains("showMenu")) {
         menu.classList.remove("showMenu");
         closeIcon.style.display = "none";
-        menuIcon.style.display = "block";
+        menuIcon.style.display = "inline-block";
     } else {
         menu.classList.add("showMenu");
-        closeIcon.style.display = "block";
+        closeIcon.style.display = "inline-block";
         menuIcon.style.display = "none";
     }
+    menuItems.forEach(
+        function(menuItem) {
+            menuItem.addEventListener("click", toggleMenu);
+        }
+    )
 }
 
 hamburger.addEventListener("click", toggleMenu);</script>
