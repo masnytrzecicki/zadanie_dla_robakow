@@ -179,12 +179,11 @@ nav img:hover{
 }
 
 .big_photo{
-    background: rgba(81, 81, 81, 0.4) url("image.jpg") no-repeat center ;
+    background: rgba(255, 70, 70, 0.4) url("image.jpg") no-repeat center ;
     background-size: cover;
     background-blend-mode: darken;
     width: 100%;
     height: calc(100vh - 69px);
-
     box-sizing: border-box;
     position: relative;
 }
@@ -203,7 +202,7 @@ nav img:hover{
     width: 100%;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr ;
 
 }
 .gallery img{
